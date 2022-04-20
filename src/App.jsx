@@ -1,20 +1,20 @@
-import './App.css';
-import { useEffect, useState } from 'react';
-import { Button, Space, Switch } from 'antd';
-import ConfigModal from './components/ConfigModal';
-import { getConfig } from './utils';
+import "./App.css";
+import { useEffect, useState } from "react";
+import { Button, Space, Switch } from "antd";
+import ConfigModal from "./components/ConfigModal";
+import { getConfig } from "./utils";
 
 function App() {
   const [configMenus, setConfigMenus] = useState([]);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    getConfigs();
+    init();
   }, []);
 
-  const getConfigs = async () => {
+  const init = async () => {
     const data = await getConfig();
-    console.log(data, 'data', JSON.stringify(data));
+    console.log(data, "---init-data---", JSON.stringify(data));
     setConfigMenus(data || []);
   };
 
