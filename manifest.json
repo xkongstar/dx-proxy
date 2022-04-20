@@ -3,13 +3,13 @@
   "description": "前端开发代理",
   "version": "0.0.1",
   "manifest_version": 3,
-  "permissions": ["storage", "activeTab", "scripting", "webRequest", "webRequestBlocking", "tabs", "<all_urls>"],
+  "permissions": ["storage", "activeTab", "scripting", "webRequest", "tabs"],
   "background": {
     "service_worker": "background.js"
   },
   "options_page": "options.html",
   "action": {
-    "default_popup": "popup.html",
+    "default_popup": "dist/index.html",
     "default_icon": {
       "16": "/images/get_started16.png",
       "32": "/images/get_started32.png",
