@@ -5,11 +5,26 @@
   width: 600px;
   height: 600px;
 }
+header {
+  height: 40px;
+  background-color: antiquewhite;
+  line-height: 40px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.content {
+  display: flex;
+  height: calc(100% - 40px);
+}
+
 .App .left {
   width: 200px;
-  height: 100%;
   background-color: aliceblue;
-  border-right: 2px solid black;
+  border-right: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .left-list {
   display: flex;

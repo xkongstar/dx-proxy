@@ -3,7 +3,15 @@
   "description": "前端开发代理",
   "version": "0.0.1",
   "manifest_version": 3,
-  "permissions": ["storage", "activeTab", "scripting", "webRequest", "tabs"],
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "webRequest",
+    "tabs"
+  ],
   "background": {
     "service_worker": "background.js"
   },
