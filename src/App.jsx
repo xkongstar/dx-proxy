@@ -4,6 +4,7 @@ import { Button, Space, Switch } from 'antd';
 import { EditTwoTone, DeleteTwoTone } from '@ant-design/icons';
 import ConfigModal from './components/ConfigModal';
 import FileProxy from './components/FileProxy';
+import CookieProxy from './components/CookieProxy';
 import { getConfig, saveConfig } from './utils';
 
 function App() {
@@ -106,6 +107,7 @@ function App() {
         {/* 右侧内容区域 */}
         <div className="right">
           {selectedRow?.type.includes('fileProxy') && <FileProxy />}
+          {selectedRow?.type.includes('editCookie') && <CookieProxy />}
         </div>
       </div>
 

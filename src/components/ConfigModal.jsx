@@ -36,7 +36,6 @@ export default function ConfigModal({ visible, onCancel, editData, onFresh }) {
     setCheckeds(e);
   };
 
-
   console.log(editData, '---editData---');
 
   return (
@@ -65,8 +64,8 @@ export default function ConfigModal({ visible, onCancel, editData, onFresh }) {
             onChange={(checkedValues) => onCheckboxChange(checkedValues)}
             options={[
               { label: '修改cookie', value: 'editCookie' },
-              { label: '线下代理线上文件', value: 'fileProxy' },
               { label: '接口转发', value: 'apiProxy' },
+              { label: '线下代理线上文件', value: 'fileProxy', disabled: true },
               { label: 'mock数据', value: 'mock', disabled: true },
             ]}
             value={checkeds}
